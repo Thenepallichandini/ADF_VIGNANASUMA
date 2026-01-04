@@ -1,5 +1,5 @@
 {
-	"name": "DA_ADLS_SOURCE_CSV",
+	"name": "DA_ADLS_TARGET_CSV_copy1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLS_GEN2",
@@ -13,7 +13,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "employee_details.csv",
+				"fileName": "copied_ employee_ details",
+				"folderPath": "archieve_datasets",
 				"fileSystem": "rawdata"
 			},
 			"columnDelimiter": ",",
