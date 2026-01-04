@@ -1,0 +1,9 @@
+{
+	"name": "adfvignan",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "958e6729-a416-4fe8-80af-a2e60b63f26f",
+		"tenantId": "5db4c933-4861-4c43-a30a-133dd04fc216"
+	}
+}
