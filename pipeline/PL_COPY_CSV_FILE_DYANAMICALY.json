@@ -1,0 +1,74 @@
+{
+	"name": "PL_COPY_CSV_FILE_DYANAMICALY",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_CsfilesDyanamically",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DA_ADLS_FILE_DYANAMIC",
+						"type": "DatasetReference",
+						"parameters": {
+							"FolderName": "rawdata sets",
+							"FileName": "bihar_election_2025_results.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DA_ADLS_FILE_DYANAMIC",
+						"type": "DatasetReference",
+						"parameters": {
+							"FolderName": "archievedatasets",
+							"FileName": "biharelection data"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
