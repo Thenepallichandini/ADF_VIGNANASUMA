@@ -49,21 +49,17 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DA_ADLS_FILE_DYANAMIC",
-						"type": "DatasetReference",
-						"parameters": {
-							"FolderName": "rawdata sets",
-							"FileName": "bihar_election_2025_results.csv"
-						}
+						"referenceName": "DS_ADLS_CSV_FILE_DYNAMICALLY",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DA_ADLS_FILE_DYANAMIC",
+						"referenceName": "DS_ADLS_CSV_FILE_DYNAMICALLY",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderName": "archievedatasets",
-							"FileName": "biharelection data"
+							"FolderName": "archieve_datasets",
+							"FileName": "bihar_election_2025_results.csv"
 						}
 					}
 				]
