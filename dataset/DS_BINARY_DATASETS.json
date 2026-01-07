@@ -1,0 +1,21 @@
+{
+	"name": "DS_BINARY_DATASETS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_GEN2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ADLS_CONTINER"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "rawdata_sets",
+				"fileSystem": "databrickscontainer"
+			}
+		}
+	}
+}
