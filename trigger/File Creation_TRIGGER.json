@@ -1,0 +1,24 @@
+{
+	"name": "File Creation_TRIGGER",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "TRIGGER _EVENT",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/databrickscontainer/blobs/EventDemo",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/d350e81d-19bf-412b-b9c8-de0dd99a7215/resourceGroups/rg_vignanasuma/providers/Microsoft.Storage/storageAccounts/storagechandini",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
